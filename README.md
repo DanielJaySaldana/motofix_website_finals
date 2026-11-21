@@ -1,6 +1,5 @@
 # MotoFix offline promotional website
 
-This VS Code workspace contains the complete project from the supplied ZIP and a local XAMPP version at the workspace root.
 
 ## Start the site
 
