@@ -1,0 +1,35 @@
+<!-- Subscriptions — styles: src/promotional/subscriptions.css -->
+<section
+  id="subscriptions"
+  class="promo-subscriptions promo-section"
+  aria-labelledby="subscriptions-title"
+>
+  <div class="promo-container">
+    <div class="promo-section-heading" data-reveal="true">
+      <span class="promo-label" aria-hidden="true"></span>
+      <h2 id="subscriptions-title">Subscriptions<br /><span>To Avail</span></h2>
+    </div>
+    <!-- Debug plan artwork: this section uses one responsive image. Keep src and srcset pointed at the same available file, update the alt description, and check subscriptions.css if its size is wrong. -->
+    <figure class="promo-full-bleed m-0" data-reveal="true">
+      <img
+        alt="MotoFix rider and motor shop subscription plans"
+        loading="lazy"
+        width="1920"
+        height="1080"
+        decoding="async"
+        data-nimg="1"
+        class="promo-subscriptions-plan"
+        srcset="/promo/subscription-plans-updated.png 1x, /promo/subscription-plans-updated.png 2x"
+        src="/promo/subscription-plans-updated.png"
+      />
+      <!-- Debug plan details: this screen-reader-only caption contains the plan prices and benefits. Keep it accurate when the infographic changes; it is not visible in the normal page layout. -->
+      <figcaption class="sr-only">
+        Rider plans: monthly ₱75, quarterly ₱200, semi-annually ₱375, annually ₱700. Includes zero
+        transaction fees, unlimited bookings, and expense tracker access. Motor shop plans: monthly
+        ₱500, quarterly ₱1,350, semi-annually ₱2,500, annually ₱4,500. Includes business analytics,
+        multi-branch management, more than three mechanic accounts, and other application
+        integrations.
+      </figcaption>
+    </figure>
+  </div>
+</section>

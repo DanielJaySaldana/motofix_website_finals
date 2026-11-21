@@ -1,0 +1,188 @@
+/* header section — base, responsive, and motion styles. */
+/* Debug mobile navigation: promotion.js adds or removes .is-open on the navigation. The narrow-screen CSS controls whether those links are visible; check that state rule and the HTML IDs if the menu button responds but links stay hidden. */
+.promo-header {
+  z-index: 50;
+  -webkit-backdrop-filter: blur(20px);
+  backdrop-filter: blur(20px);
+  border-bottom: 1px solid var(--promo-line);
+  background: #f4f2ebf0;
+  position: sticky;
+  top: 0;
+}
+.promo-nav {
+  grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr);
+  align-items: center;
+  gap: 32px;
+  height: 94px;
+  display: grid;
+}
+.promo-nav > .promo-brand {
+  justify-self: start;
+}
+.promo-nav > .promo-nav-links {
+  grid-column: 2;
+  justify-self: center;
+}
+.promo-nav > .promo-nav-cta {
+  grid-column: 3;
+  justify-self: end;
+}
+.promo-brand {
+  flex-shrink: 0;
+  align-items: center;
+  gap: 10px;
+  display: inline-flex;
+}
+.promo-brand > img {
+  object-fit: contain;
+  background: #fff;
+  border-radius: 10px;
+  width: 52px;
+  height: 52px;
+  padding: 6px;
+  display: block;
+}
+.promo-brand > span {
+  letter-spacing: -1.5px;
+  font:
+    800 27px/1 MotoFix Heading,
+    sans-serif;
+}
+.promo-brand > span > span {
+  color: #e45c29;
+}
+.promo-brand .promo-brand-period {
+  color: var(--promo-ink);
+}
+.promo-nav-links {
+  align-items: center;
+  gap: clamp(16px, 1.8vw, 28px);
+  display: flex;
+}
+.promo-nav-links a {
+  white-space: nowrap;
+  font-size: 14px;
+  line-height: 2;
+  position: relative;
+}
+.promo-nav-links a:after {
+  content: "";
+  background: var(--promo-ink);
+  transform-origin: 0;
+  height: 1px;
+  transition: transform 0.3s var(--promo-ease);
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  right: 0;
+  transform: scaleX(0);
+}
+.promo-nav-links a:hover:after,
+.promo-nav-links a[aria-current]:after {
+  transform: scaleX(1);
+}
+.promo-nav-cta {
+  gap: 28px;
+  min-height: 44px;
+  padding: 11px 17px;
+  font-size: 11px;
+}
+.promo-menu-button {
+  color: var(--promo-ink);
+  background: 0 0;
+  border: 0;
+  padding: 8px;
+  display: none;
+}
+@media (max-width: 1150px) {
+  .promo-nav-links {
+    gap: 15px;
+  }
+  .promo-nav {
+    gap: 20px;
+  }
+  .promo-nav-cta {
+    gap: 14px;
+  }
+}
+@media (max-width: 1320px) {
+  .promo-nav {
+    justify-content: space-between;
+    gap: 14px;
+    height: 78px;
+    display: flex;
+  }
+  .promo-nav-cta {
+    margin-left: auto;
+  }
+  .promo-menu-button {
+    place-items: center;
+    display: grid;
+  }
+  .promo-nav-links {
+    background: var(--promo-paper);
+    border-bottom: 1px solid var(--promo-line);
+    padding: 22px 24px;
+    display: none;
+    position: absolute;
+    top: 78px;
+    left: 0;
+    right: 0;
+    box-shadow: 0 15px 20px #102b3608;
+  }
+  .promo-nav-links.is-open {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 26px;
+    display: flex;
+  }
+}
+@media (max-width: 600px) {
+  .promo-nav {
+    gap: 10px;
+    height: 76px;
+  }
+  .promo-brand {
+    gap: 7px;
+  }
+  .promo-brand > img {
+    border-radius: 8px;
+    width: 44px;
+    height: 44px;
+    padding: 5px;
+  }
+  .promo-brand > span {
+    letter-spacing: -1.3px;
+    font-size: 23px;
+  }
+  .promo-nav-cta {
+    gap: 14px;
+    min-height: 40px;
+    padding: 10px 12px;
+    font-size: 10px;
+  }
+  .promo-menu-button {
+    padding: 6px 0 6px 3px;
+  }
+  .promo-nav-links {
+    gap: 20px;
+    top: 76px;
+  }
+  .promo-nav-links a {
+    font-size: 14px;
+  }
+}
+@media (max-width: 359px) {
+  .promo-brand > span {
+    font-size: 20px;
+  }
+  .promo-brand > img {
+    width: 39px;
+    height: 39px;
+  }
+  .promo-nav-cta {
+    gap: 8px;
+    padding-inline: 10px;
+    font-size: 9px;
+  }
+}

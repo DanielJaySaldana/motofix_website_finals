@@ -1,0 +1,541 @@
+<!-- About Us — styles: src/promotional/about-us.css -->
+<section class="promo-about promo-section" id="about" aria-labelledby="about-title">
+  <!-- Debug: The header links to #about. If clicking About Us stops scrolling here, compare that href with this section ID; also keep aria-labelledby="about-title" paired with the h2 ID. -->
+  <div class="promo-container">
+    <div class="promo-section-heading" data-reveal="true">
+      <span class="promo-label" aria-hidden="true"></span>
+      <h2 id="about-title">Our Inspiring<br /><span>Story</span></h2>
+    </div>
+    <!-- Debug story image: the anchor href opens the full artwork, while img src/srcset display it here. Update the alt description too whenever the image changes. -->
+    <figure class="promo-full-bleed m-0" data-reveal="true">
+      <a
+        href="/promo/our-inspiring-story-jerald.png"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="Open the full Our Inspiring Story image"
+        ><img
+          alt="The SVCS team’s MotoFix origin story over a sunset city landscape"
+          loading="lazy"
+          width="1568"
+          height="882"
+          decoding="async"
+          data-nimg="1"
+          class="block h-auto w-full rounded"
+          srcset="
+            /promo/our-inspiring-story-jerald.png 1x,
+            /promo/our-inspiring-story-jerald.png 2x
+          "
+          src="/promo/our-inspiring-story-jerald.png"
+      /></a>
+      <figcaption class="sr-only">
+        <!-- -->Before establishing MotoFix, we the “SVCS” team sought guidance from our instructor
+        in identifying an industry with a significant problem worth solving. Throughout the process,
+        we explored different industries and evaluated the severity of their problems and the
+        possible solutions we could offer. After facing several rejections, we learned to look
+        deeper and eventually focused on the automotive industry, particularly motorcycle repair
+        services. We recognized that motorcycles have become essential for everyday transportation,
+        whether for going to school, work, markets, or other destinations. This encouraged us to
+        investigate the challenges motorcycle riders face when seeking repair services. One of our
+        co-founders, Jerald M. Cañasares, shared his personal experiences with motorcycle repair
+        difficulties, which helped us realize that these challenges could also be experienced by
+        many other riders. This discovery inspired us to pursue the idea that eventually became
+        MotoFix.
+      </figcaption>
+    </figure>
+    <!-- Debug values grid: mission, vision, objectives, and team are .promo-about-value cards. If spacing or order looks wrong, check those HTML classes and the matching rules in about-us.css. -->
+    <div class="promo-about-values">
+      <article class="promo-about-value" aria-labelledby="about-mission-title" data-reveal="true">
+        <span class="promo-about-icon" aria-hidden="true"
+          ><svg
+            viewBox="0 0 64 64"
+            fill="none"
+            stroke="#173e49"
+            stroke-width="1.8"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            aria-hidden="true"
+          >
+            <path d="m25 48-5 8m19-8 5 8"></path>
+            <circle cx="30" cy="32" r="22" fill="#e5eeea"></circle>
+            <circle cx="30" cy="32" r="15" fill="#fff9ec" stroke="#bd6541"></circle>
+            <circle cx="30" cy="32" r="8" fill="#f6ba89" stroke="#bd6541"></circle>
+            <circle cx="30" cy="32" r="2.5" fill="#173e49" stroke="none"></circle>
+            <path d="m30 32 21-21" stroke-width="2.5"></path>
+            <path d="m43 19 1-9 7-3v8l7 1-4 7-9-1" fill="#ed7846" stroke="#a64e2c"></path>
+            <path d="m45 21 6-6"></path></svg
+        ></span>
+        <h3 id="about-mission-title">Our Mission</h3>
+        <p>
+          Our mission is to make motorcycle repair services more accessible, transparent, and
+          convenient by connecting riders with motor shops and motorcycle mechanics. We aim to help
+          riders make informed repair decisions through reliable service information, clear cost
+          estimates, parts availability, and consistent repair updates.
+        </p>
+      </article>
+      <article
+        class="promo-about-value [@media(max-width:600px)]:order-2"
+        aria-labelledby="about-vision-title"
+        data-reveal="true"
+      >
+        <span class="promo-about-icon" aria-hidden="true"
+          ><svg
+            viewBox="0 0 64 64"
+            fill="none"
+            stroke="#173e49"
+            stroke-width="1.8"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            aria-hidden="true"
+          >
+            <path d="M5 32S15 16 32 16s27 16 27 16-10 16-27 16S5 32 5 32Z" fill="#fff9ec"></path>
+            <path d="M10 32s9-11 22-11 22 11 22 11" stroke="#8ca5a0"></path>
+            <circle cx="32" cy="32" r="12" fill="#5e9f99"></circle>
+            <circle cx="32" cy="32" r="7" fill="#173e49"></circle>
+            <circle cx="36" cy="28" r="3" fill="#fff9ec" stroke="none"></circle>
+            <path d="M32 7v4M14 12l3 4m33-4-3 4M32 53v4" stroke="#c66a3f"></path>
+            <path d="m24 41 3-3m-6-6h4m14 9-3-3" stroke="#b4d6c9"></path></svg
+        ></span>
+        <h3 id="about-vision-title">Our Vision</h3>
+        <p>
+          Our vision is to become a trusted motorcycle service platform that transforms how riders
+          and motor shops connect and interact. We aspire to contribute to a motorcycle repair
+          industry where transparency, accountability, and convenience are standard parts of every
+          repair experience.
+        </p>
+      </article>
+      <!-- Debug objectives: each image path should point to an existing file under website/promo/objectives. Check its src and alt text if a card image is blank or mislabeled. -->
+      <article
+        id="objectives"
+        class="promo-about-value flex flex-col [@media(max-width:600px)]:order-1"
+        aria-labelledby="about-objectives-title"
+        data-reveal="true"
+      >
+        <span class="promo-about-icon" aria-hidden="true"
+          ><svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="48"
+            height="48"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.5"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="lucide lucide-route text-[#173e49]"
+            aria-hidden="true"
+          >
+            <path d="M9 5h8.5a1 1 0 010 7h-11a1 1 0 000 7H15"></path>
+            <circle cx="18" cy="19" r="3"></circle>
+            <circle cx="6" cy="5" r="3"></circle></svg
+        ></span>
+        <h3 id="about-objectives-title">OBJECTIVES</h3>
+        <div class="relative mt-6 flex flex-1">
+          <svg
+            class="pointer-events-none absolute top-7 bottom-7 left-0 h-[calc(100%-56px)] w-14"
+            viewBox="0 0 64 366"
+            preserveAspectRatio="none"
+            fill="none"
+            aria-hidden="true"
+          >
+            <path
+              d="M32 0C60 40 4 82 32 122S60 204 32 244S4 326 32 366"
+              stroke="#d4ded1"
+              stroke-width="30"
+            ></path>
+            <path
+              d="M32 0C60 40 4 82 32 122S60 204 32 244S4 326 32 366"
+              stroke="#e7ede2"
+              stroke-width="27"
+            ></path>
+            <path
+              d="M32 0C60 40 4 82 32 122S60 204 32 244S4 326 32 366"
+              stroke="#b56b48"
+              stroke-width="1.6"
+              stroke-dasharray="5 7"
+            ></path>
+          </svg>
+          <ol class="relative flex w-full min-w-0 flex-col justify-between gap-6">
+            <li class="relative flex min-h-[84px] items-start gap-5">
+              <span
+                class="relative z-10 grid h-14 w-14 shrink-0 place-items-center rounded-2xl border border-[#c9d5c5] bg-gradient-to-br from-[#fffcf3] to-[#e1e9dc] text-[#264c4b] shadow-[0_5px_12px_#173e4910,inset_0_1px_0_#ffffff]"
+                aria-hidden="true"
+                ><img
+                  alt=""
+                  loading="lazy"
+                  width="192"
+                  height="192"
+                  decoding="async"
+                  data-nimg="1"
+                  class="h-12 w-12 object-contain"
+                  sizes="48px"
+                  srcset="
+                    /promo/objectives/shop.png   32w,
+                    /promo/objectives/shop.png   48w,
+                    /promo/objectives/shop.png   64w,
+                    /promo/objectives/shop.png   96w,
+                    /promo/objectives/shop.png  128w,
+                    /promo/objectives/shop.png  256w,
+                    /promo/objectives/shop.png  384w,
+                    /promo/objectives/shop.png  640w,
+                    /promo/objectives/shop.png  750w,
+                    /promo/objectives/shop.png  828w,
+                    /promo/objectives/shop.png 1080w,
+                    /promo/objectives/shop.png 1200w,
+                    /promo/objectives/shop.png 1920w,
+                    /promo/objectives/shop.png 2048w,
+                    /promo/objectives/shop.png 3840w
+                  "
+                  src="/promo/objectives/shop.png"
+                /><span
+                  class="absolute -right-1 -bottom-1 grid h-[19px] w-[19px] place-items-center rounded-full border-2 border-[#f8f7f1] bg-[#ff713b] text-[8px] font-bold text-[#102b36]"
+                  >1</span
+                ></span
+              >
+              <div class="min-w-0 pt-0.5">
+                <span
+                  class="inline-flex items-center gap-2 text-[10px] font-bold tracking-[.12em] text-[#a64e2c]"
+                  >Q1 2027</span
+                >
+                <p class="mt-2! text-left! font-medium">Partner with 10 motor shops by Q1 2027.</p>
+              </div>
+            </li>
+            <li class="relative flex min-h-[84px] items-start gap-5">
+              <span
+                class="relative z-10 grid h-14 w-14 shrink-0 place-items-center rounded-2xl border border-[#c9d5c5] bg-gradient-to-br from-[#fffcf3] to-[#e1e9dc] text-[#264c4b] shadow-[0_5px_12px_#173e4910,inset_0_1px_0_#ffffff]"
+                aria-hidden="true"
+                ><img
+                  alt=""
+                  loading="lazy"
+                  width="192"
+                  height="192"
+                  decoding="async"
+                  data-nimg="1"
+                  class="h-12 w-12 object-contain"
+                  sizes="48px"
+                  srcset="
+                    /promo/objectives/riders.png   32w,
+                    /promo/objectives/riders.png   48w,
+                    /promo/objectives/riders.png   64w,
+                    /promo/objectives/riders.png   96w,
+                    /promo/objectives/riders.png  128w,
+                    /promo/objectives/riders.png  256w,
+                    /promo/objectives/riders.png  384w,
+                    /promo/objectives/riders.png  640w,
+                    /promo/objectives/riders.png  750w,
+                    /promo/objectives/riders.png  828w,
+                    /promo/objectives/riders.png 1080w,
+                    /promo/objectives/riders.png 1200w,
+                    /promo/objectives/riders.png 1920w,
+                    /promo/objectives/riders.png 2048w,
+                    /promo/objectives/riders.png 3840w
+                  "
+                  src="/promo/objectives/riders.png"
+                /><span
+                  class="absolute -right-1 -bottom-1 grid h-[19px] w-[19px] place-items-center rounded-full border-2 border-[#f8f7f1] bg-[#ff713b] text-[8px] font-bold text-[#102b36]"
+                  >2</span
+                ></span
+              >
+              <div class="min-w-0 pt-0.5">
+                <span
+                  class="inline-flex items-center gap-2 text-[10px] font-bold tracking-[.12em] text-[#a64e2c]"
+                  >Q2 2027</span
+                >
+                <p class="mt-2! text-left! font-medium">
+                  Acquire 500 registered riders by Q2 2027.
+                </p>
+              </div>
+            </li>
+            <li class="relative flex min-h-[84px] items-start gap-5">
+              <span
+                class="relative z-10 grid h-14 w-14 shrink-0 place-items-center rounded-2xl border border-[#c9d5c5] bg-gradient-to-br from-[#fffcf3] to-[#e1e9dc] text-[#264c4b] shadow-[0_5px_12px_#173e4910,inset_0_1px_0_#ffffff]"
+                aria-hidden="true"
+                ><img
+                  alt=""
+                  loading="lazy"
+                  width="192"
+                  height="192"
+                  decoding="async"
+                  data-nimg="1"
+                  class="h-12 w-12 object-contain"
+                  sizes="48px"
+                  srcset="
+                    /promo/objectives/revenue.png   32w,
+                    /promo/objectives/revenue.png   48w,
+                    /promo/objectives/revenue.png   64w,
+                    /promo/objectives/revenue.png   96w,
+                    /promo/objectives/revenue.png  128w,
+                    /promo/objectives/revenue.png  256w,
+                    /promo/objectives/revenue.png  384w,
+                    /promo/objectives/revenue.png  640w,
+                    /promo/objectives/revenue.png  750w,
+                    /promo/objectives/revenue.png  828w,
+                    /promo/objectives/revenue.png 1080w,
+                    /promo/objectives/revenue.png 1200w,
+                    /promo/objectives/revenue.png 1920w,
+                    /promo/objectives/revenue.png 2048w,
+                    /promo/objectives/revenue.png 3840w
+                  "
+                  src="/promo/objectives/revenue.png"
+                /><span
+                  class="absolute -right-1 -bottom-1 grid h-[19px] w-[19px] place-items-center rounded-full border-2 border-[#f8f7f1] bg-[#ff713b] text-[8px] font-bold text-[#102b36]"
+                  >3</span
+                ></span
+              >
+              <div class="min-w-0 pt-0.5">
+                <span
+                  class="inline-flex items-center gap-2 text-[10px] font-bold tracking-[.12em] text-[#a64e2c]"
+                  >Q3 2027</span
+                >
+                <p class="mt-2! text-left! font-medium">
+                  Generate consistent monthly revenue by Q3 2027.
+                </p>
+              </div>
+            </li>
+            <li class="relative flex min-h-[84px] items-start gap-5">
+              <span
+                class="relative z-10 grid h-14 w-14 shrink-0 place-items-center rounded-2xl border border-[#c9d5c5] bg-gradient-to-br from-[#fffcf3] to-[#e1e9dc] text-[#264c4b] shadow-[0_5px_12px_#173e4910,inset_0_1px_0_#ffffff]"
+                aria-hidden="true"
+                ><img
+                  alt=""
+                  loading="lazy"
+                  width="192"
+                  height="192"
+                  decoding="async"
+                  data-nimg="1"
+                  class="h-12 w-12 object-contain"
+                  sizes="48px"
+                  srcset="
+                    /promo/objectives/cities.png   32w,
+                    /promo/objectives/cities.png   48w,
+                    /promo/objectives/cities.png   64w,
+                    /promo/objectives/cities.png   96w,
+                    /promo/objectives/cities.png  128w,
+                    /promo/objectives/cities.png  256w,
+                    /promo/objectives/cities.png  384w,
+                    /promo/objectives/cities.png  640w,
+                    /promo/objectives/cities.png  750w,
+                    /promo/objectives/cities.png  828w,
+                    /promo/objectives/cities.png 1080w,
+                    /promo/objectives/cities.png 1200w,
+                    /promo/objectives/cities.png 1920w,
+                    /promo/objectives/cities.png 2048w,
+                    /promo/objectives/cities.png 3840w
+                  "
+                  src="/promo/objectives/cities.png"
+                /><span
+                  class="absolute -right-1 -bottom-1 grid h-[19px] w-[19px] place-items-center rounded-full border-2 border-[#f8f7f1] bg-[#ff713b] text-[8px] font-bold text-[#102b36]"
+                  >4</span
+                ></span
+              >
+              <div class="min-w-0 pt-0.5">
+                <span
+                  class="inline-flex items-center gap-2 text-[10px] font-bold tracking-[.12em] text-[#a64e2c]"
+                  >Q4 2027</span
+                >
+                <p class="mt-2! text-left! font-medium">
+                  Expand partnerships to other cities by Q4 2027.
+                </p>
+              </div>
+            </li>
+          </ol>
+        </div>
+      </article>
+      <!-- Debug team cards: check that each portrait image belongs to the right person and that its alt text or accessible label names that person. -->
+      <article
+        id="team-members"
+        class="promo-about-value flex flex-col [@media(max-width:600px)]:order-3"
+        aria-labelledby="about-team-title"
+        data-reveal="true"
+      >
+        <span class="promo-about-icon" aria-hidden="true"
+          ><svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="48"
+            height="48"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.5"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="lucide lucide-users text-[#173e49]"
+            aria-hidden="true"
+          >
+            <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path>
+            <path d="M16 3.128a4 4 0 0 1 0 7.744"></path>
+            <path d="M22 21v-2a4 4 0 0 0-3-3.87"></path>
+            <circle cx="9" cy="7" r="4"></circle></svg
+        ></span>
+        <h3 id="about-team-title">TEAM MEMBERS</h3>
+        <div class="flex flex-1 items-center py-4">
+          <ul
+            class="grid w-full grid-cols-2 gap-x-4 gap-y-7 min-[1280px]:grid-cols-4 min-[1280px]:gap-x-3"
+          >
+            <li class="min-w-0 text-center">
+              <img
+                alt="Portrait of Daniel Jay P. Saldaña"
+                loading="lazy"
+                width="342"
+                height="558"
+                decoding="async"
+                data-nimg="1"
+                class="mx-auto block h-auto w-full max-w-[118px]"
+                sizes="(min-width: 1280px) 118px, 120px"
+                srcset="
+                  /promo/team/daniel-jay-saldana.png   32w,
+                  /promo/team/daniel-jay-saldana.png   48w,
+                  /promo/team/daniel-jay-saldana.png   64w,
+                  /promo/team/daniel-jay-saldana.png   96w,
+                  /promo/team/daniel-jay-saldana.png  128w,
+                  /promo/team/daniel-jay-saldana.png  256w,
+                  /promo/team/daniel-jay-saldana.png  384w,
+                  /promo/team/daniel-jay-saldana.png  640w,
+                  /promo/team/daniel-jay-saldana.png  750w,
+                  /promo/team/daniel-jay-saldana.png  828w,
+                  /promo/team/daniel-jay-saldana.png 1080w,
+                  /promo/team/daniel-jay-saldana.png 1200w,
+                  /promo/team/daniel-jay-saldana.png 1920w,
+                  /promo/team/daniel-jay-saldana.png 2048w,
+                  /promo/team/daniel-jay-saldana.png 3840w
+                "
+                src="/promo/team/daniel-jay-saldana.png"
+              />
+              <h4
+                aria-label="Daniel Jay P. Saldaña"
+                class="mt-3! text-[13px] leading-[1.5] font-bold tracking-[-.025em] text-[#102b36] [font-family:'MotoFix_Heading',sans-serif]"
+              >
+                <span class="block">Daniel Jay</span><span class="block">P. Saldaña</span>
+              </h4>
+              <span
+                class="mt-2 inline-block rounded border border-[#e5c3ac] bg-[#fff1e4] px-2 py-0.5 text-[10px] leading-[1.5] font-bold tracking-[.12em] text-[#a64e2c]"
+                >CEO</span
+              >
+            </li>
+            <li class="min-w-0 text-center">
+              <img
+                alt="Portrait of John Matthew P. Villas"
+                loading="lazy"
+                width="342"
+                height="558"
+                decoding="async"
+                data-nimg="1"
+                class="mx-auto block h-auto w-full max-w-[118px]"
+                sizes="(min-width: 1280px) 118px, 120px"
+                srcset="
+                  /promo/team/john-matthew-villas.png   32w,
+                  /promo/team/john-matthew-villas.png   48w,
+                  /promo/team/john-matthew-villas.png   64w,
+                  /promo/team/john-matthew-villas.png   96w,
+                  /promo/team/john-matthew-villas.png  128w,
+                  /promo/team/john-matthew-villas.png  256w,
+                  /promo/team/john-matthew-villas.png  384w,
+                  /promo/team/john-matthew-villas.png  640w,
+                  /promo/team/john-matthew-villas.png  750w,
+                  /promo/team/john-matthew-villas.png  828w,
+                  /promo/team/john-matthew-villas.png 1080w,
+                  /promo/team/john-matthew-villas.png 1200w,
+                  /promo/team/john-matthew-villas.png 1920w,
+                  /promo/team/john-matthew-villas.png 2048w,
+                  /promo/team/john-matthew-villas.png 3840w
+                "
+                src="/promo/team/john-matthew-villas.png"
+              />
+              <h4
+                aria-label="John Matthew P. Villas"
+                class="mt-3! text-[13px] leading-[1.5] font-bold tracking-[-.025em] text-[#102b36] [font-family:'MotoFix_Heading',sans-serif]"
+              >
+                <span class="block">John Matthew</span><span class="block">P. Villas</span>
+              </h4>
+              <span
+                class="mt-2 inline-block rounded border border-[#e5c3ac] bg-[#fff1e4] px-2 py-0.5 text-[10px] leading-[1.5] font-bold tracking-[.12em] text-[#a64e2c]"
+                >CMO</span
+              >
+            </li>
+            <li class="min-w-0 text-center">
+              <img
+                alt="Portrait of Jerald M. Cañasares"
+                loading="lazy"
+                width="342"
+                height="558"
+                decoding="async"
+                data-nimg="1"
+                class="mx-auto block h-auto w-full max-w-[118px]"
+                sizes="(min-width: 1280px) 118px, 120px"
+                srcset="
+                  /promo/team/jerald-canasares.png   32w,
+                  /promo/team/jerald-canasares.png   48w,
+                  /promo/team/jerald-canasares.png   64w,
+                  /promo/team/jerald-canasares.png   96w,
+                  /promo/team/jerald-canasares.png  128w,
+                  /promo/team/jerald-canasares.png  256w,
+                  /promo/team/jerald-canasares.png  384w,
+                  /promo/team/jerald-canasares.png  640w,
+                  /promo/team/jerald-canasares.png  750w,
+                  /promo/team/jerald-canasares.png  828w,
+                  /promo/team/jerald-canasares.png 1080w,
+                  /promo/team/jerald-canasares.png 1200w,
+                  /promo/team/jerald-canasares.png 1920w,
+                  /promo/team/jerald-canasares.png 2048w,
+                  /promo/team/jerald-canasares.png 3840w
+                "
+                src="/promo/team/jerald-canasares.png"
+              />
+              <h4
+                aria-label="Jerald M. Cañasares"
+                class="mt-3! text-[13px] leading-[1.5] font-bold tracking-[-.025em] text-[#102b36] [font-family:'MotoFix_Heading',sans-serif]"
+              >
+                <span class="block">Jerald M.</span><span class="block">Cañasares</span>
+              </h4>
+              <span
+                class="mt-2 inline-block rounded border border-[#e5c3ac] bg-[#fff1e4] px-2 py-0.5 text-[10px] leading-[1.5] font-bold tracking-[.12em] text-[#a64e2c]"
+                >CTO</span
+              >
+            </li>
+            <li class="min-w-0 text-center">
+              <img
+                alt="Portrait of Mitchele Gay L. Sanchez"
+                loading="lazy"
+                width="342"
+                height="558"
+                decoding="async"
+                data-nimg="1"
+                class="mx-auto block h-auto w-full max-w-[118px]"
+                sizes="(min-width: 1280px) 118px, 120px"
+                srcset="
+                  /promo/team/mitchele-gay-sanchez.png   32w,
+                  /promo/team/mitchele-gay-sanchez.png   48w,
+                  /promo/team/mitchele-gay-sanchez.png   64w,
+                  /promo/team/mitchele-gay-sanchez.png   96w,
+                  /promo/team/mitchele-gay-sanchez.png  128w,
+                  /promo/team/mitchele-gay-sanchez.png  256w,
+                  /promo/team/mitchele-gay-sanchez.png  384w,
+                  /promo/team/mitchele-gay-sanchez.png  640w,
+                  /promo/team/mitchele-gay-sanchez.png  750w,
+                  /promo/team/mitchele-gay-sanchez.png  828w,
+                  /promo/team/mitchele-gay-sanchez.png 1080w,
+                  /promo/team/mitchele-gay-sanchez.png 1200w,
+                  /promo/team/mitchele-gay-sanchez.png 1920w,
+                  /promo/team/mitchele-gay-sanchez.png 2048w,
+                  /promo/team/mitchele-gay-sanchez.png 3840w
+                "
+                src="/promo/team/mitchele-gay-sanchez.png"
+              />
+              <h4
+                aria-label="Mitchele Gay L. Sanchez"
+                class="mt-3! text-[13px] leading-[1.5] font-bold tracking-[-.025em] text-[#102b36] [font-family:'MotoFix_Heading',sans-serif]"
+              >
+                <span class="block">Mitchele Gay</span><span class="block">L. Sanchez</span>
+              </h4>
+              <span
+                class="mt-2 inline-block rounded border border-[#e5c3ac] bg-[#fff1e4] px-2 py-0.5 text-[10px] leading-[1.5] font-bold tracking-[.12em] text-[#a64e2c]"
+                >COO</span
+              >
+            </li>
+          </ul>
+        </div>
+      </article>
+    </div>
+    <!-- Build note: Vite replaces the next exact include directive with our-prototype.html here. Keep the include syntax and filename unchanged or the prototype section will be missing. -->
+    <!-- include: "our-prototype.html" -->
+  </div>
+</section>

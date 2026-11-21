@@ -1,0 +1,125 @@
+/* our prototype section — base, responsive, and motion styles. */
+/* Debug prototype layout: the card starts as a single column and gains columns at the larger min-width breakpoints below. Check both the card class in our-prototype.html and these breakpoints when spacing changes by screen size. */
+.promo-prototype {
+  margin-top: 5rem;
+}
+.promo-prototype-card {
+  display: grid;
+  align-items: center;
+  gap: 2.5rem;
+  border-radius: 0.5rem;
+  background: #102b36;
+  color: #f4f2eb;
+  padding: 1.75rem;
+}
+@media (min-width: 40rem) {
+  .promo-prototype-card {
+    padding: 3rem;
+  }
+}
+@media (min-width: 64rem) {
+  .promo-prototype-card {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 4rem;
+  }
+}
+
+.promo-about-solution {
+  isolation: isolate;
+  background: var(--promo-ink);
+  color: var(--promo-paper);
+  border-radius: 8px;
+  grid-template-columns: 0.42fr 1fr;
+  align-items: center;
+  gap: 65px;
+  margin-top: 28px;
+  padding: 42px;
+  display: grid;
+  position: relative;
+  overflow: hidden;
+}
+.promo-about-solution:after {
+  content: "";
+  z-index: -1;
+  border: 1px solid color-mix(in srgb, var(--promo-paper) 13%, transparent);
+  width: 350px;
+  height: 350px;
+  box-shadow: 0 0 0 35px color-mix(in srgb, var(--promo-paper) 3%, transparent);
+  pointer-events: none;
+  border-radius: 50%;
+  position: absolute;
+  top: -140px;
+  right: -120px;
+}
+.promo-about-solution .promo-about-icon {
+  background: linear-gradient(145deg, #214a53, #163641);
+  border-color: #42626a;
+  box-shadow:
+    inset 0 1px #ffffff12,
+    0 5px 14px #071b2320;
+}
+.promo-about-solution h3 {
+  font: 600 48px/1 var(--promo-display);
+  letter-spacing: -0.5px;
+  margin-top: 20px;
+}
+.promo-about-solution > p {
+  font-size: 16px;
+  line-height: 1.95;
+}
+.promo-about-people {
+  align-items: center;
+  width: 190px;
+  margin-top: 28px;
+  display: flex;
+}
+.promo-about-people > span {
+  color: #ffb77e;
+  background: linear-gradient(145deg, #2e5660, #1b3d48);
+  border: 1px solid #5b7b7c;
+  border-radius: 13px;
+  flex-shrink: 0;
+  place-items: center;
+  width: 43px;
+  height: 43px;
+  display: grid;
+  box-shadow: inset 0 1px #ffffff12;
+}
+.promo-about-people > span:nth-of-type(2) {
+  color: #abd6c7;
+}
+.promo-about-people > span:nth-of-type(3) {
+  color: #f3d49a;
+}
+.promo-about-people svg {
+  fill: #ffffff0d;
+  stroke-width: 1.8px;
+}
+.promo-about-people > i {
+  border-top: 1px dashed color-mix(in srgb, var(--promo-paper) 30%, transparent);
+  flex: 1;
+}
+@media (max-width: 850px) {
+  .promo-about-solution {
+    grid-template-columns: 0.5fr 1fr;
+    gap: 32px;
+    padding: 32px;
+  }
+}
+@media (max-width: 600px) {
+  .promo-about-solution {
+    grid-template-columns: 1fr;
+    gap: 25px;
+    margin-top: 20px;
+    padding: 28px 25px;
+  }
+  .promo-about-solution h3 {
+    font-size: 42px;
+  }
+  .promo-about-solution > p {
+    font-size: 15px;
+  }
+  .promo-about-people {
+    margin-top: 22px;
+  }
+}

@@ -1,0 +1,20 @@
+
+# Local database credentials
+/motofix-complete/config/database.php
+
+# Database exports and backups
+*.sql
+*.sql.gz
+
+# Environment secrets
+.env
+.env.*
+!.env.example
+
+# Dependencies
+node_modules/
+
+# Accidental nested repository
+/motofix_promotional_website/
+
+motofix-complete/PRESENTATION-GUIDE.md

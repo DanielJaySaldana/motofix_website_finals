@@ -1,0 +1,4 @@
+Options -Indexes
+RewriteEngine On
+RewriteBase /motofix_website_finals/
+RewriteRule ^(preview|rider|shop|mechanic)(/.*)?$ preview.php [QSA,L]

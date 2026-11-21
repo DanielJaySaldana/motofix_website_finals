@@ -1,0 +1,41 @@
+/* footer section — base, responsive, and motion styles. */
+/* Debug footer layout: .promo-footer-bottom is a three-column row on wide screens. The media query below changes its layout for narrow screens, so check both rules when alignment differs by device. */
+.promo-footer {
+  color: var(--promo-paper);
+  background: #0c2631;
+  padding-block: 14px 12px;
+}
+.promo-footer-bottom {
+  color: #b6c6be;
+  grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr);
+  align-items: center;
+  gap: 25px;
+  font-size: 9px;
+  display: grid;
+}
+.promo-footer-bottom > span:nth-child(2) {
+  letter-spacing: 1px;
+  font-size: 8px;
+}
+.promo-footer-credit {
+  justify-self: center;
+  width: clamp(80px, 10vw, 128px);
+}
+.promo-footer-bottom > a {
+  justify-self: end;
+  align-items: center;
+  gap: 12px;
+  display: flex;
+}
+@media (max-width: 600px) {
+  .promo-footer {
+    padding-top: 12px;
+  }
+  .promo-footer-bottom {
+    gap: 15px;
+    font-size: 8px;
+  }
+  .promo-footer-bottom > span:nth-child(2) {
+    display: block;
+  }
+}

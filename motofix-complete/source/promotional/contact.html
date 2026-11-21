@@ -1,0 +1,208 @@
+<!-- Contact — styles: src/promotional/contact.css -->
+<section
+  id="feedback"
+  class="promo-section border-t border-[#d8dcd3]"
+  aria-labelledby="feedback-title"
+>
+  <div class="promo-container grid items-start gap-10 lg:grid-cols-[.85fr_1.15fr] lg:gap-20">
+    <div>
+      <span
+        class="mb-7 inline-flex h-14 w-14 items-center justify-center rounded-2xl border border-[#cbd4c8] bg-[#e7ebe1] text-[#284e51]"
+        aria-hidden="true"
+        ><svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="27"
+          height="27"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="1.5"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          class="lucide lucide-message-square-text"
+          aria-hidden="true"
+        >
+          <path
+            d="M22 17a2 2 0 0 1-2 2H6.828a2 2 0 0 0-1.414.586l-2.202 2.202A.71.71 0 0 1 2 21.286V5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2z"
+          ></path>
+          <path d="M7 11h10"></path>
+          <path d="M7 15h6"></path>
+          <path d="M7 7h8"></path></svg
+      ></span>
+      <h2
+        id="feedback-title"
+        class="max-w-lg text-[clamp(38px,4.2vw,64px)] leading-[1.08] font-semibold tracking-[-.035em]"
+      >
+        We'd Love to Hear From You!
+      </h2>
+      <p class="mt-6! max-w-sm text-base leading-8 text-[#66726f]">
+        Your feedback helps us improve MotoFix and provide a better user experience
+      </p>
+    </div>
+    <!-- Debug feedback form: promotion.js reads the controls with FormData and sends them to feedback.php. If a field is missing, check its name attribute and keep the live status region below inside this form. -->
+    <form class="grid gap-6 rounded-lg border border-[#d8dcd3] bg-[#f9f8f2] p-6 sm:p-9" action="feedback.php" method="post">
+      <p class="promo-feedback-notice">
+        Your feedback is saved locally on this computer and is not sent over the internet.
+      </p>
+      <div class="grid gap-6 sm:grid-cols-2">
+        <div>
+          <label for="feedback-fullName" class="text-sm font-semibold">Full Name</label
+          ><input
+            id="feedback-fullName"
+            type="text"
+            autocomplete="name"
+            required=""
+            maxlength="100"
+            minlength="2"
+            class="mt-2 w-full rounded border border-[#bdc8bf] bg-[#fbfaf6] px-4 py-3 text-[15px] text-[#102b36] placeholder:text-[#7a8480] focus:border-[#d85828] focus:outline-2 focus:outline-offset-2 focus:outline-[#d85828]"
+            aria-invalid="false"
+            name="fullName"
+          />
+        </div>
+        <div>
+          <label for="feedback-email" class="text-sm font-semibold">Email Address</label
+          ><input
+            id="feedback-email"
+            type="email"
+            autocomplete="email"
+            required=""
+            maxlength="254"
+            class="mt-2 w-full rounded border border-[#bdc8bf] bg-[#fbfaf6] px-4 py-3 text-[15px] text-[#102b36] placeholder:text-[#7a8480] focus:border-[#d85828] focus:outline-2 focus:outline-offset-2 focus:outline-[#d85828]"
+            aria-invalid="false"
+            name="email"
+          />
+        </div>
+      </div>
+      <div>
+        <label for="feedback-category" class="text-sm font-semibold">Feedback Category</label
+        ><select
+          id="feedback-category"
+          name="category"
+          required=""
+          class="mt-2 w-full rounded border border-[#bdc8bf] bg-[#fbfaf6] px-4 py-3 text-[15px] text-[#102b36] placeholder:text-[#7a8480] focus:border-[#d85828] focus:outline-2 focus:outline-offset-2 focus:outline-[#d85828]"
+          aria-invalid="false"
+        >
+          <option value="" disabled="" selected="">Select a category</option>
+          <option>Suggestions</option>
+          <option>General Feedback</option>
+          <option>Bug Report</option>
+          <option>Complaint</option>
+          <option>Other</option>
+        </select>
+      </div>
+      <div>
+        <label for="feedback-message" class="text-sm font-semibold">Your Message</label
+        ><textarea
+          id="feedback-message"
+          name="message"
+          required=""
+          minlength="10"
+          maxlength="5000"
+          rows="6"
+          placeholder="Tell us what you think about MotoFix…"
+          class="mt-2 w-full rounded border border-[#bdc8bf] bg-[#fbfaf6] px-4 py-3 text-[15px] text-[#102b36] placeholder:text-[#7a8480] focus:border-[#d85828] focus:outline-2 focus:outline-offset-2 focus:outline-[#d85828] resize-y"
+          aria-invalid="false"
+        ></textarea>
+      </div>
+      <div class="hidden" aria-hidden="true">
+        <label>Website<input tabindex="-1" autocomplete="off" name="website" /></label>
+      </div>
+      <button
+        class="promo-button justify-self-start disabled:cursor-wait disabled:opacity-60"
+        type="submit"
+      >
+        Submit Feedback<svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="20"
+          height="20"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          class="lucide lucide-arrow-up-right"
+          aria-hidden="true"
+        >
+          <path d="M7 7h10v10"></path>
+          <path d="M7 17 17 7"></path>
+        </svg>
+      </button>
+      <!-- Debug status: the feedback script writes success or error text into this empty aria-live region. Keep it inside the form so messages appear and are announced after submission. -->
+      <div aria-live="polite" aria-atomic="true"></div>
+    </form>
+  </div>
+</section>
+<!-- Debug contact anchor: the header link points to #contact. Keep this ID in sync if the contact section or its navigation label changes. -->
+<section class="promo-contact" id="contact" aria-labelledby="contact-title">
+  <div class="promo-container">
+    <div class="promo-contact-top" data-reveal="true">
+      <div>
+        <span class="promo-label" aria-hidden="true"></span>
+        <h2 id="contact-title">Let’s get<br />you moving.</h2>
+      </div>
+      <a href="/preview" class="promo-contact-circle"
+        ><svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="56"
+          height="56"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="1"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          class="lucide lucide-arrow-up-right"
+          aria-hidden="true"
+        >
+          <path d="M7 7h10v10"></path>
+          <path d="M7 17 17 7"></path></svg
+        ><span>Try Now and Experience MotoFix!</span></a
+      >
+    </div>
+    <div class="promo-contact-details">
+      <a href="tel:+639091865661"
+        ><span class="promo-label"
+          ><svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="17"
+            height="17"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="lucide lucide-phone"
+            aria-hidden="true"
+          >
+            <path
+              d="M13.832 16.568a1 1 0 0 0 1.213-.303l.355-.465A2 2 0 0 1 17 15h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2A18 18 0 0 1 2 4a2 2 0 0 1 2-2h3a2 2 0 0 1 2 2v3a2 2 0 0 1-.8 1.6l-.468.351a1 1 0 0 0-.292 1.233 14 14 0 0 0 6.392 6.384"
+            ></path></svg></span
+        ><span>09091865661</span></a
+      ><a
+        class="promo-social-account"
+        href="https://facebook.com/OfficialFBMotoFix"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="MotoFix official Facebook page — opens in a new tab"
+        ><span class="promo-label"
+          ><span
+            class="promo-contact-brand-icon promo-icon-facebook"
+            aria-hidden="true"
+          ></span></span
+        ><span>https://facebook.com/OfficialFBMotoFix</span></a
+      ><a
+        href="https://www.google.com/maps/search/?api=1&amp;query=Davao+del+Norte+State+College+New+Visayas+Panabo+City"
+        target="_blank"
+        rel="noreferrer"
+        ><span class="promo-label"
+          ><span
+            class="promo-contact-brand-icon promo-icon-googlemaps"
+            aria-hidden="true"
+          ></span></span
+        ><span>Davao del Norte State College, New Visayas, Panabo City, Davao del Norte</span></a
+      >
+    </div>
+  </div>
+</section>

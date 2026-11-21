@@ -1,0 +1,185 @@
+/* about us section — base, responsive, and motion styles. */
+/* Debug About Us: these selectors style the story, values, objectives, and team cards under .promo-about. If a rule seems ignored, check the HTML class first; the media queries later in this file can override desktop spacing on smaller screens. */
+.promo-about.promo-section {
+  padding-top: 36px;
+}
+.promo-about {
+  border-bottom: 1px solid var(--promo-line);
+}
+.promo-about p {
+  text-align: justify;
+}
+.promo-about-story {
+  border-bottom: 1px solid var(--promo-line);
+  grid-template-columns: 0.42fr 1fr;
+  gap: 70px;
+  padding-bottom: 58px;
+  display: grid;
+}
+.promo-about-icon {
+  width: 76px;
+  height: 76px;
+  transition: transform 0.35s var(--promo-ease);
+  background: linear-gradient(145deg, #fffcf4, #e8ede2);
+  border: 1px solid #d7ded3;
+  border-radius: 20px;
+  flex-shrink: 0;
+  place-items: center;
+  display: grid;
+  box-shadow:
+    inset 0 1px #fff,
+    0 5px 14px #173e490a;
+}
+.promo-about-icon > svg {
+  width: 58px;
+  height: 58px;
+}
+.promo-about-story h2 {
+  font: 600 clamp(58px, 5.8vw, 88px)/1 var(--promo-display);
+  letter-spacing: -0.02em;
+  margin-top: 24px;
+}
+.promo-about-story-route {
+  justify-content: space-between;
+  align-items: center;
+  width: 138px;
+  height: 24px;
+  margin-top: 33px;
+  display: flex;
+  position: relative;
+}
+.promo-about-story-route:before {
+  content: "";
+  border-top: 1px dashed color-mix(in srgb, var(--promo-orange) 65%, transparent);
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+}
+.promo-about-story-route > span {
+  background: var(--promo-orange);
+  width: 8px;
+  height: 8px;
+  box-shadow: 0 0 0 5px var(--promo-paper);
+  border-radius: 50%;
+  position: relative;
+}
+.promo-about-story-copy {
+  max-width: 79ch;
+  color: var(--promo-muted);
+  font-size: 17px;
+  line-height: 2;
+}
+.promo-about-drop-cap {
+  float: left;
+  color: #b95a31;
+  transform-origin: 0;
+  margin-top: -6px;
+  margin-right: 9px;
+  font:
+    400 85px/0.85 Times New Roman,
+    Times,
+    serif;
+  transform: scaleX(1.1);
+}
+.promo-about-values {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 28px;
+  margin-top: 45px;
+  display: grid;
+}
+.promo-about-value {
+  border: 1px solid var(--promo-line);
+  background: color-mix(in srgb, var(--promo-paper) 65%, white);
+  border-radius: 8px;
+  padding: 35px;
+  position: relative;
+}
+.promo-about-value:after {
+  content: "";
+  border-top: 1px solid var(--promo-line);
+  border-right: 1px solid var(--promo-line);
+  pointer-events: none;
+  width: 31px;
+  height: 31px;
+  position: absolute;
+  top: 26px;
+  right: 26px;
+}
+.promo-about-value:hover .promo-about-icon {
+  transform: translateY(-3px) rotate(-6deg);
+}
+.promo-about-value h3 {
+  letter-spacing: -0.6px;
+  margin: 24px 0 14px;
+  font:
+    700 25px/1.3 MotoFix Heading,
+    sans-serif;
+}
+.promo-about-value p {
+  color: var(--promo-muted);
+  font-size: 16px;
+  line-height: 1.95;
+}
+@media (max-width: 850px) {
+  .promo-about-story {
+    grid-template-columns: 0.5fr 1fr;
+    gap: 35px;
+  }
+  .promo-about-story-copy {
+    font-size: 16px;
+  }
+  .promo-about-value {
+    padding: 27px;
+  }
+}
+@media (max-width: 600px) {
+  .promo-about-story {
+    grid-template-columns: 1fr;
+    gap: 26px;
+    padding-bottom: 34px;
+  }
+  .promo-about-story-heading {
+    align-items: center;
+    gap: 16px;
+    display: flex;
+  }
+  .promo-about-story h2 {
+    margin-top: 0;
+    font-size: 54px;
+  }
+  .promo-about-icon {
+    border-radius: 17px;
+    width: 64px;
+    height: 64px;
+  }
+  .promo-about-icon > svg {
+    width: 49px;
+    height: 49px;
+  }
+  .promo-about-story-route {
+    display: none;
+  }
+  .promo-about-story-copy {
+    font-size: 16px;
+    line-height: 1.95;
+  }
+  .promo-about-drop-cap {
+    font-size: 71px;
+  }
+  .promo-about-values {
+    grid-template-columns: 1fr;
+    gap: 20px;
+    margin-top: 28px;
+  }
+  .promo-about-value {
+    padding: 25px;
+  }
+  .promo-about-value h3 {
+    margin-top: 20px;
+    font-size: 23px;
+  }
+  .promo-about-value p {
+    font-size: 15px;
+  }
+}

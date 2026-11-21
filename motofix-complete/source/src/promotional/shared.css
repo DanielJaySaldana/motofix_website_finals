@@ -1,0 +1,358 @@
+/* Shared promotional foundations and reusable components. */
+/* Debug shared styles: color, font, spacing, buttons, and reusable components live here. Most rules are scoped under .promo-site so they apply across promotional sections without leaking into the system screens. */
+.promo-site {
+  --promo-paper: #f4f2eb;
+  --promo-ink: #102b36;
+  --promo-orange: #ff713b;
+  --promo-muted: #66726f;
+  --promo-line: #d8dcd3;
+  --promo-display: "MotoFix Display", "MotoFix Heading", sans-serif;
+  --promo-ease: cubic-bezier(0.22, 1, 0.36, 1);
+  background: var(--promo-paper);
+  color: var(--promo-ink);
+  font:
+    400 15px/1.6 MotoFix Sans,
+    sans-serif;
+  overflow: clip;
+}
+.promo-site :is(h1, h2, h3, h4, p) {
+  margin: 0;
+}
+.promo-site :is(a, button) {
+  -webkit-tap-highlight-color: transparent;
+}
+.promo-site a {
+  color: inherit;
+  text-decoration: none;
+}
+.promo-site button {
+  font: inherit;
+  cursor: pointer;
+}
+.promo-site :is(a, button):focus-visible {
+  outline-offset: 5px;
+  outline: 3px solid;
+}
+.promo-site [hidden] {
+  display: none !important;
+}
+.promo-site section {
+  scroll-margin-top: 100px;
+}
+.promo-container {
+  width: min(1360px, 100% - 104px);
+  margin-inline: auto;
+}
+.promo-full-bleed {
+  width: 100vw;
+  position: relative;
+  margin-inline: calc(50% - 50vw) !important;
+}
+.promo-label {
+  letter-spacing: 1.4px;
+  font-size: 10px;
+  font-weight: 600;
+  line-height: 1.6;
+}
+.preview-loading {
+  place-items: center;
+  min-height: 100dvh;
+  display: grid;
+}
+.promo-skip {
+  z-index: 100;
+  background: var(--promo-orange);
+  padding: 12px 20px;
+  position: fixed;
+  top: -100px;
+  left: 20px;
+}
+.promo-skip:focus {
+  top: 12px;
+}
+.promo-scroll-progress {
+  z-index: 60;
+  background: var(--promo-orange);
+  width: 0;
+  height: 3px;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+.promo-button {
+  background: var(--promo-orange);
+  min-height: 55px;
+  color: var(--promo-ink);
+  transition:
+    background 0.25s,
+    color 0.25s,
+    transform 0.35s var(--promo-ease);
+  border: 1px solid #0000;
+  border-radius: 3px;
+  justify-content: space-between;
+  align-items: center;
+  gap: 30px;
+  padding: 16px 22px;
+  font-size: 12px;
+  font-weight: 700;
+  display: inline-flex;
+}
+.promo-button svg {
+  transition: transform 0.35s var(--promo-ease);
+}
+.promo-button:hover {
+  background: var(--promo-ink);
+  color: var(--promo-paper);
+  transform: translateY(-2px);
+}
+.promo-button:hover svg {
+  transform: translate(3px, -3px);
+}
+.promo-phone {
+  background: #0c1920;
+  border: 2px solid #6b7f88;
+  border-radius: 34px;
+  width: 242px;
+  padding: 6px;
+  position: relative;
+  overflow: hidden;
+  box-shadow:
+    16px 24px 35px #00131c40,
+    inset 0 0 0 2px #000;
+}
+.promo-phone > img {
+  aspect-ratio: 390/844;
+  object-fit: cover;
+  border-radius: 25px;
+  width: 100%;
+  height: auto;
+  display: block;
+}
+.promo-phone-camera {
+  z-index: 1;
+  background: #081117;
+  border-radius: 20px;
+  width: 63px;
+  height: 16px;
+  position: absolute;
+  top: 12px;
+  left: 50%;
+  transform: translate(-50%);
+}
+.promo-phone-indicator {
+  background: #d1dce3;
+  border-radius: 4px;
+  width: 65px;
+  height: 3px;
+  position: absolute;
+  bottom: 12px;
+  left: 50%;
+  transform: translate(-50%);
+}
+.promo-section {
+  padding-block: 115px;
+}
+.promo-section-heading {
+  grid-template-columns: 0.48fr 1fr 0.25fr;
+  align-items: start;
+  gap: 28px;
+  margin-bottom: 42px;
+  display: grid;
+}
+.promo-section-heading > .promo-label {
+  color: var(--promo-muted);
+  margin-top: 10px;
+}
+.promo-section-heading h2 {
+  font: 600 clamp(58px, 5.8vw, 88px)/0.98 var(--promo-display);
+  letter-spacing: -0.015em;
+  text-transform: uppercase;
+}
+.promo-section-heading h2 > span {
+  color: var(--promo-muted);
+}
+.promo-heading-arrow {
+  color: #e45c29;
+  place-self: center end;
+}
+.promo-section-aside {
+  place-self: end;
+  font-size: 11px;
+  line-height: 1.8;
+}
+.promo-audience-tabs {
+  border: 1px solid var(--promo-line);
+  border-radius: 4px;
+  gap: 4px;
+  width: fit-content;
+  margin-bottom: 35px;
+  padding: 4px;
+  display: flex;
+}
+.promo-audience-tabs button {
+  min-width: 155px;
+  color: var(--promo-muted);
+  background: 0 0;
+  border: none;
+  border-radius: 2px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 20px;
+  font-size: 12px;
+  transition:
+    background 0.25s,
+    color 0.25s;
+  display: flex;
+}
+.promo-audience-tabs button:hover {
+  color: var(--promo-ink);
+}
+.promo-audience-tabs button.active {
+  background: var(--promo-ink);
+  color: var(--promo-paper);
+}
+.promo-route-art {
+  width: 100%;
+  height: 100%;
+  color: var(--promo-orange);
+  z-index: -1;
+  position: absolute;
+}
+.promo-route-art .route-outline {
+  stroke: #a8c4bd1f;
+  stroke-width: 58px;
+}
+.promo-route-art .route-dashes {
+  stroke: #b9d3ca4d;
+  stroke-width: 1px;
+  stroke-dasharray: 6 8;
+}
+[data-reveal].reveal-ready {
+  opacity: 0;
+  transition:
+    opacity 0.85s var(--promo-ease),
+    transform 0.85s var(--promo-ease);
+  transform: translateY(26px);
+}
+[data-reveal].reveal-ready.is-revealed {
+  opacity: 1;
+  transform: none;
+}
+@keyframes promo-route-travel {
+  to {
+    stroke-dashoffset: -280px;
+  }
+}
+@keyframes promo-progress {
+  to {
+    width: 100%;
+  }
+}
+@media (prefers-reduced-motion: no-preference) {
+  html:has(.promo-site) {
+    scroll-behavior: smooth;
+  }
+  .promo-route-art .route-dashes {
+    animation: 35s linear infinite promo-route-travel;
+  }
+  @supports (animation-timeline: scroll()) {
+    .promo-scroll-progress {
+      animation: linear both promo-progress;
+      animation-timeline: scroll();
+    }
+  }
+}
+@media (max-width: 1150px) {
+  .promo-container {
+    width: calc(100% - 72px);
+  }
+  .promo-section-heading {
+    grid-template-columns: 0.35fr 1fr 0.3fr;
+  }
+}
+@media (max-width: 850px) {
+  .promo-container {
+    width: calc(100% - 48px);
+  }
+  .promo-section {
+    padding-block: 85px;
+  }
+  .promo-section-heading {
+    grid-template-columns: 1fr auto;
+    gap: 23px;
+  }
+  .promo-section-heading > .promo-label {
+    grid-column: 1/-1;
+    margin-top: 0;
+  }
+  .promo-section-heading h2 {
+    font-size: 70px;
+  }
+  .promo-section-aside {
+    align-self: center;
+  }
+  .promo-heading-arrow {
+    width: 55px;
+  }
+}
+@media (max-width: 600px) {
+  .promo-container {
+    width: calc(100% - 40px);
+  }
+  .promo-site section {
+    scroll-margin-top: 90px;
+  }
+  .promo-section {
+    padding-block: 68px;
+  }
+  .promo-section-heading {
+    gap: 19px;
+    margin-bottom: 28px;
+  }
+  .promo-section-heading > .promo-label {
+    font-size: 8px;
+  }
+  .promo-section-heading h2 {
+    font-size: clamp(48px, 12.8vw, 72px);
+  }
+  .promo-heading-arrow {
+    width: 40px;
+    height: 40px;
+  }
+  .promo-section-aside {
+    display: none;
+  }
+  .promo-audience-tabs {
+    width: 100%;
+    margin-bottom: 27px;
+  }
+  .promo-audience-tabs button {
+    flex: 1;
+    gap: 6px;
+    min-width: 0;
+    padding: 11px 8px;
+    font-size: 10px;
+  }
+  .promo-audience-tabs button svg {
+    width: 17px;
+  }
+}
+@media (max-width: 359px) {
+  .promo-container {
+    width: calc(100% - 32px);
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .promo-site *,
+  .promo-site :before,
+  .promo-site :after {
+    scroll-behavior: auto !important;
+    transition: none !important;
+    animation: none !important;
+  }
+  .promo-site [data-reveal].reveal-ready {
+    opacity: 1;
+    transform: none;
+  }
+}

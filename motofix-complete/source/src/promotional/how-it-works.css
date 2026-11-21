@@ -1,0 +1,162 @@
+/* how it works section — base, responsive, and motion styles. */
+/* Debug guide tabs: this file styles the selected .active tab and workflow panels. JavaScript controls which panel is hidden, so a visibility problem belongs in the HTML tab IDs or promotion.js, not only in these colors. */
+.promo-how {
+  background: var(--promo-ink);
+  color: var(--promo-paper);
+}
+.promo-how .promo-section-heading > .promo-label {
+  color: #b0c1ba;
+}
+.promo-how .promo-section-heading h2 > span {
+  color: var(--promo-orange);
+}
+.promo-how .promo-section-aside {
+  color: #b0c1ba;
+}
+.promo-how .promo-audience-tabs {
+  border-color: #58706f;
+  margin-top: 55px;
+  margin-bottom: 46px;
+}
+.promo-how .promo-audience-tabs button {
+  color: #bbcbc5;
+}
+.promo-how .promo-audience-tabs button:hover {
+  color: #fff;
+}
+.promo-how .promo-audience-tabs button.active {
+  color: var(--promo-ink);
+  background: var(--promo-orange);
+}
+.promo-workflow-panel {
+  animation: promo-guide-in 0.45s var(--promo-ease);
+}
+.promo-workflow-steps {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 46px 34px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: grid;
+}
+.promo-workflow-steps li {
+  border: 1px solid #68817a99;
+  border-radius: 5px;
+  padding: 22px;
+}
+.promo-workflow-step-top {
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 23px;
+  display: flex;
+}
+.promo-workflow-step-top > span {
+  font: 500 48px/1 var(--promo-display);
+  letter-spacing: -1px;
+  color: var(--promo-orange);
+}
+.promo-workflow-step-top > svg {
+  color: #9fb5ac;
+}
+.promo-workflow-steps h3 {
+  letter-spacing: -0.35px;
+  max-width: 220px;
+  min-height: 48px;
+  font:
+    600 16px/1.5 MotoFix Heading,
+    sans-serif;
+}
+.promo-workflow-steps p {
+  color: #b6c8c0;
+  max-width: 260px;
+  margin-top: 12px;
+  font-size: 12px;
+  line-height: 1.85;
+}
+.promo-demo-note {
+  color: #b6c8c0;
+  border-top: 1px solid #68817a66;
+  align-items: flex-start;
+  gap: 9px;
+  padding-top: 24px;
+  font-size: 10px;
+  line-height: 1.9;
+  display: flex;
+  margin-top: 56px !important;
+}
+.promo-demo-note svg {
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+@keyframes promo-guide-in {
+  0% {
+    opacity: 0.3;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+@media (max-width: 1150px) {
+  .promo-workflow-steps {
+    gap: 38px 25px;
+  }
+}
+@media (max-width: 850px) {
+  .promo-workflow-steps {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 34px;
+  }
+  .promo-workflow-steps h3 {
+    max-width: none;
+    min-height: auto;
+  }
+  .promo-workflow-steps p {
+    max-width: none;
+  }
+}
+@media (max-width: 600px) {
+  .promo-how .promo-audience-tabs {
+    margin-top: 32px;
+    margin-bottom: 30px;
+  }
+  .promo-workflow-steps {
+    gap: 18px;
+  }
+  .promo-workflow-steps li {
+    padding: 18px;
+  }
+  .promo-workflow-step-top {
+    margin-bottom: 17px;
+  }
+  .promo-workflow-step-top > span {
+    font-size: 39px;
+  }
+  .promo-workflow-step-top > svg {
+    width: 16px;
+  }
+  .promo-workflow-steps h3 {
+    letter-spacing: -0.25px;
+    font-size: 13px;
+    line-height: 1.5;
+  }
+  .promo-workflow-steps p {
+    margin-top: 9px;
+    font-size: 11px;
+    line-height: 1.8;
+  }
+  .promo-demo-note {
+    padding-top: 20px;
+    font-size: 9px;
+    margin-top: 34px !important;
+  }
+}
+@media (max-width: 359px) {
+  .promo-workflow-steps {
+    grid-template-columns: 1fr;
+  }
+  .promo-workflow-steps h3 {
+    font-size: 14px;
+  }
+}
