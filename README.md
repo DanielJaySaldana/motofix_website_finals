@@ -10,10 +10,4 @@ This VS Code workspace contains the complete project from the supplied ZIP and a
 
 The feedback form saves submissions to `motofix_promotional.feedback_submissions`. The interactive demo also stores accounts, role-specific records, support tickets, and uploaded files in this MySQL database. Website artwork, fonts, video, styles, and demo code are stored in this workspace for offline use.
 
-## Where to edit the page
 
-- Promotional sections: [`motofix-complete/source/promotional/`](motofix-complete/source/promotional/)
-- Matching section stylesheets: [`motofix-complete/source/src/promotional/`](motofix-complete/source/src/promotional/)
-- Shared promotional interactions: [`motofix-complete/source/src/promotional/promotion.js`](motofix-complete/source/src/promotional/promotion.js)
-- Local database setup: [`motofix-complete/database/motofix.sql`](motofix-complete/database/motofix.sql)
-- XAMPP connection settings: [`motofix-complete/config/database.php`](motofix-complete/config/database.php)
