@@ -1,0 +1,498 @@
+/* home section — base, responsive, and motion styles. */
+/* Debug hero layout: .promo-hero-layout places copy and artwork in columns on wide screens. The media queries later in this file change the columns and spacing; inspect those before changing the desktop grid. */
+.promo-watch-link > span {
+  transition: transform 0.35s var(--promo-ease);
+}
+.promo-hero {
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+.promo-hero-layout {
+  grid-template-columns: 1.06fr 1fr;
+  align-items: center;
+  gap: 48px;
+  display: grid;
+}
+.promo-hero-copy {
+  padding-block: 40px 12px;
+}
+.promo-hero-copy > .promo-label {
+  align-items: center;
+  gap: 9px;
+  display: flex;
+}
+.promo-status-dot {
+  background: #e45c29;
+  border-radius: 50%;
+  width: 6px;
+  height: 6px;
+  box-shadow: 0 0 0 4px #ff713b15;
+}
+.promo-hero h1 {
+  font-family: var(--promo-display);
+  text-transform: uppercase;
+  letter-spacing: -0.025em;
+  margin-block: 32px 28px;
+  font-size: clamp(90px, 9.7vw, 148px);
+  font-weight: 700;
+  line-height: 0.88;
+}
+.promo-hero h1 > span {
+  color: #e45c29;
+}
+.promo-value {
+  color: #566764;
+  max-width: 415px;
+  font-size: 15px;
+  line-height: 1.85;
+}
+.promo-value strong {
+  color: var(--promo-ink);
+  font-weight: 500;
+}
+.promo-hero-tagline {
+  color: #435c63;
+  letter-spacing: -0.4px;
+  text-wrap: balance;
+  max-width: 440px;
+  font:
+    600 clamp(17px, 1.6vw, 23px)/1.6 MotoFix Heading,
+    sans-serif;
+}
+.promo-actions {
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 28px;
+  margin-top: 30px;
+  display: flex;
+}
+.promo-watch-link {
+  align-items: center;
+  gap: 10px;
+  font-size: 12px;
+  display: inline-flex;
+}
+.promo-watch-link > span {
+  border: 1px solid #a1aaa3;
+  border-radius: 50%;
+  place-items: center;
+  width: 35px;
+  height: 35px;
+  display: grid;
+}
+.promo-watch-link:hover > span {
+  transform: scale(1.12);
+}
+.promo-hero-caption {
+  letter-spacing: 1px;
+  color: var(--promo-muted);
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 24px;
+  margin-top: 55px;
+  font-size: 8px;
+  display: flex;
+}
+.promo-hero-caption > a {
+  letter-spacing: 0;
+  color: var(--promo-ink);
+  align-items: center;
+  gap: 9px;
+  font-size: 10px;
+  display: inline-flex;
+}
+.promo-hero-visual {
+  min-width: 0;
+  height: 620px;
+  position: relative;
+}
+.promo-hero-photo {
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 45px 100%, 0 calc(100% - 45px));
+  background: #273b45;
+  border-radius: 3px;
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+}
+.promo-hero-photo:after {
+  content: "";
+  pointer-events: none;
+  background: linear-gradient(#0a20243d, #0000 25% 65%, #0a202480);
+  position: absolute;
+  inset: 0;
+}
+.promo-hero-photo > img {
+  object-fit: cover;
+  object-position: 58% center;
+  width: 100%;
+  height: 100%;
+  transition: transform 1.5s var(--promo-ease);
+  display: block;
+}
+.promo-hero-visual:hover .promo-hero-photo > img {
+  transform: scale(1.035);
+}
+.promo-photo-topline {
+  z-index: 1;
+  color: #fff9ed;
+  letter-spacing: 1.1px;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 8px;
+  font-weight: 600;
+  display: flex;
+  position: absolute;
+  top: 24px;
+  left: 25px;
+  right: 25px;
+}
+.promo-photo-coordinate {
+  z-index: 1;
+  color: #fff9ed;
+  font: 400 10px monospace;
+  position: absolute;
+  bottom: 58px;
+  right: 112px;
+}
+.promo-photo-credit {
+  z-index: 2;
+  opacity: 0.8;
+  font-size: 8px;
+  position: absolute;
+  bottom: 34px;
+  right: 112px;
+  color: #fff9ed !important;
+}
+.promo-photo-credit:hover {
+  opacity: 1;
+  text-decoration: underline;
+}
+.promo-hero-phone {
+  z-index: 2;
+  position: absolute;
+  bottom: -15px;
+  left: -40px;
+  transform: rotate(-9deg);
+}
+.promo-hero-phone .promo-phone {
+  border-radius: 27px;
+  width: 177px;
+}
+.promo-hero-phone .promo-phone > img {
+  border-radius: 19px;
+}
+.promo-hero-phone .promo-phone-camera {
+  width: 47px;
+  height: 12px;
+  top: 10px;
+}
+.promo-hero-seal {
+  z-index: 3;
+  background: var(--promo-orange);
+  width: 88px;
+  height: 88px;
+  color: var(--promo-ink);
+  transition: transform 0.4s var(--promo-ease);
+  border-radius: 50%;
+  place-items: center;
+  display: grid;
+  position: absolute;
+  bottom: -22px;
+  right: -19px;
+}
+.promo-hero-seal:hover {
+  transform: rotate(45deg);
+}
+.promo-hero-corner {
+  border-top: 2px solid var(--promo-orange);
+  border-left: 2px solid var(--promo-orange);
+  width: 35px;
+  height: 35px;
+  position: absolute;
+  top: -10px;
+  left: -10px;
+}
+.promo-connection-strip {
+  border-block: 1px solid var(--promo-line);
+  justify-content: space-between;
+  align-items: center;
+  gap: 32px;
+  margin-top: 62px;
+  padding-block: 28px;
+  display: flex;
+}
+.promo-connection-strip > .promo-label {
+  color: var(--promo-muted);
+  font-size: 9px;
+}
+.promo-connection-strip > div {
+  align-items: center;
+  gap: 12px;
+  font-size: 12px;
+  display: flex;
+}
+.promo-connection-line {
+  border-top: 1px dashed #9ca9a1;
+  width: 60px;
+  margin-inline: 18px;
+}
+@keyframes promo-enter {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+@keyframes promo-float {
+  0%,
+  to {
+    translate: 0;
+  }
+  50% {
+    translate: 0 -9px;
+  }
+}
+@media (prefers-reduced-motion: no-preference) {
+  .promo-hero-copy > * {
+    animation: promo-enter 0.9s var(--promo-ease) both;
+  }
+  .promo-hero-copy > :nth-child(2) {
+    animation-delay: 80ms;
+  }
+  .promo-hero-copy > :nth-child(3) {
+    animation-delay: 0.16s;
+  }
+  .promo-hero-copy > :nth-child(4) {
+    animation-delay: 0.24s;
+  }
+  .promo-hero-copy > :nth-child(5) {
+    animation-delay: 0.32s;
+  }
+  .promo-hero-phone {
+    animation: 7s ease-in-out infinite promo-float;
+  }
+}
+@media (max-width: 1150px) {
+  .promo-hero-layout {
+    gap: 35px;
+  }
+  .promo-hero-visual {
+    height: 565px;
+  }
+  .promo-hero h1 {
+    font-size: 10vw;
+  }
+  .promo-hero-phone {
+    left: -20px;
+  }
+  .promo-hero-phone .promo-phone {
+    width: 155px;
+  }
+  .promo-hero-caption {
+    gap: 15px;
+    margin-top: 35px;
+  }
+  .promo-actions {
+    gap: 19px;
+  }
+  .promo-actions .promo-button {
+    gap: 20px;
+    padding: 15px 18px;
+  }
+  .promo-connection-line {
+    width: 35px;
+    margin-inline: 10px;
+  }
+}
+@media (max-width: 850px) {
+  .promo-hero {
+    padding-top: 30px;
+  }
+  .promo-hero-layout {
+    grid-template-columns: 1.05fr 1fr;
+    gap: 20px;
+  }
+  .promo-hero h1 {
+    font-size: 10.5vw;
+  }
+  .promo-value {
+    font-size: 13px;
+  }
+  .promo-hero-copy {
+    padding-block: 20px;
+  }
+  .promo-hero-copy > .promo-label {
+    letter-spacing: 1px;
+    font-size: 8px;
+  }
+  .promo-hero-visual {
+    height: 520px;
+  }
+  .promo-photo-topline {
+    font-size: 6px;
+    left: 18px;
+    right: 18px;
+  }
+  .promo-hero-phone {
+    bottom: -8px;
+    left: 10px;
+  }
+  .promo-hero-phone .promo-phone {
+    border-radius: 24px;
+    width: 130px;
+  }
+  .promo-hero-seal {
+    width: 66px;
+    height: 66px;
+    bottom: -12px;
+    right: -8px;
+  }
+  .promo-hero-caption {
+    flex-direction: column;
+    align-items: flex-start;
+    margin-top: 30px;
+  }
+  .promo-actions {
+    gap: 18px;
+  }
+  .promo-actions .promo-button {
+    min-height: 49px;
+    font-size: 11px;
+  }
+  .promo-watch-link {
+    font-size: 11px;
+  }
+  .promo-connection-strip {
+    margin-top: 45px;
+    padding-block: 24px;
+  }
+  .promo-connection-strip > .promo-label {
+    max-width: 90px;
+    font-size: 7px;
+  }
+  .promo-connection-strip > div {
+    gap: 8px;
+    font-size: 10px;
+  }
+  .promo-connection-line {
+    width: 22px;
+    margin-inline: 6px;
+  }
+}
+@media (max-width: 600px) {
+  .promo-hero {
+    padding-top: 12px;
+  }
+  .promo-hero-layout {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 30px;
+    display: flex;
+  }
+  .promo-hero-copy {
+    padding: 28px 0 0;
+  }
+  .promo-hero-copy > .promo-label {
+    letter-spacing: 1.2px;
+    font-size: 8px;
+  }
+  .promo-hero h1 {
+    margin-block: 26px 22px;
+    font-size: clamp(64px, 18.5vw, 112px);
+    line-height: 0.9;
+  }
+  .promo-value {
+    max-width: 360px;
+    font-size: 13px;
+    line-height: 1.8;
+  }
+  .promo-actions {
+    gap: 22px;
+    margin-top: 24px;
+  }
+  .promo-actions .promo-button {
+    gap: 23px;
+    padding: 14px 17px;
+    font-size: 11px;
+  }
+  .promo-watch-link {
+    gap: 8px;
+    font-size: 10px;
+  }
+  .promo-watch-link > span {
+    width: 31px;
+    height: 31px;
+  }
+  .promo-hero-caption {
+    margin-top: 24px;
+    display: flex;
+  }
+  .promo-hero-visual {
+    height: 440px;
+    margin-left: 20px;
+    margin-right: 7px;
+  }
+  .promo-hero-photo > img {
+    object-position: 58% center;
+  }
+  .promo-photo-topline {
+    font-size: 7px;
+    top: 20px;
+  }
+  .promo-hero-phone {
+    bottom: -16px;
+    left: -5px;
+  }
+  .promo-hero-phone .promo-phone {
+    width: 144px;
+  }
+  .promo-hero-seal {
+    width: 64px;
+    height: 64px;
+    bottom: -16px;
+    right: -7px;
+  }
+  .promo-photo-coordinate {
+    font-size: 8px;
+    bottom: 89px;
+    right: 15px;
+  }
+  .promo-photo-credit {
+    font-size: 6px;
+    bottom: 66px;
+    right: 15px;
+  }
+  .promo-connection-strip {
+    margin-top: 49px;
+    padding-block: 21px;
+    display: block;
+  }
+  .promo-connection-strip > .promo-label {
+    display: none;
+  }
+  .promo-connection-strip > div {
+    justify-content: space-between;
+    gap: 5px;
+    font-size: 9px;
+  }
+  .promo-connection-strip svg {
+    width: 17px;
+  }
+  .promo-connection-line {
+    flex: 1;
+    min-width: 8px;
+    margin-inline: 5px;
+  }
+}
+@media (max-width: 359px) {
+  .promo-hero h1 {
+    font-size: 19.4vw;
+  }
+  .promo-actions,
+  .promo-actions .promo-button {
+    gap: 15px;
+  }
+}

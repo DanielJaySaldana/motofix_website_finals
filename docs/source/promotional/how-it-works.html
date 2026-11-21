@@ -1,0 +1,257 @@
+<!-- How It Works — styles: src/promotional/how-it-works.css -->
+<section class="promo-how promo-section" id="how-it-works" aria-labelledby="how-title">
+  <div class="promo-container">
+    <div class="promo-section-heading" data-reveal="true">
+      <span class="promo-label" aria-hidden="true"></span>
+      <h2 id="how-title">How MotoFix<br /><span>works</span></h2>
+    </div>
+    <!-- Debug guide tabs: each tab aria-controls must equal the id of its guide panel. promotion.js switches the hidden panel and supports arrow-key navigation, so check both the IDs and the hidden attributes if a tab appears stuck. -->
+    <div class="promo-audience-tabs" role="tablist" aria-label="Getting started by user type">
+      <button
+        id="guide-rider-tab"
+        role="tab"
+        aria-selected="true"
+        aria-controls="guide-rider-panel"
+        tabindex="0"
+        class="active"
+      >
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="18"
+          height="18"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          class="lucide lucide-bike"
+          aria-hidden="true"
+        >
+          <circle cx="18.5" cy="17.5" r="3.5"></circle>
+          <circle cx="5.5" cy="17.5" r="3.5"></circle>
+          <circle cx="15" cy="5" r="1"></circle>
+          <path d="M12 17.5V14l-3-3 4-3 2 3h2"></path>
+        </svg>
+        <!-- -->For riders</button
+      ><button
+        id="guide-shop-tab"
+        role="tab"
+        aria-selected="false"
+        aria-controls="guide-shop-panel"
+        tabindex="-1"
+        class=""
+      >
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="18"
+          height="18"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          class="lucide lucide-store"
+          aria-hidden="true"
+        >
+          <path d="M15 21v-5a1 1 0 0 0-1-1h-4a1 1 0 0 0-1 1v5"></path>
+          <path
+            d="M17.774 10.31a1.12 1.12 0 0 0-1.549 0 2.5 2.5 0 0 1-3.451 0 1.12 1.12 0 0 0-1.548 0 2.5 2.5 0 0 1-3.452 0 1.12 1.12 0 0 0-1.549 0 2.5 2.5 0 0 1-3.77-3.248l2.889-4.184A2 2 0 0 1 7 2h10a2 2 0 0 1 1.653.873l2.895 4.192a2.5 2.5 0 0 1-3.774 3.244"
+          ></path>
+          <path d="M4 10.95V19a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8.05"></path>
+        </svg>
+        <!-- -->For motor shops</button
+      ><button
+        id="guide-mechanic-tab"
+        role="tab"
+        aria-selected="false"
+        aria-controls="guide-mechanic-panel"
+        tabindex="-1"
+        class=""
+      >
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="18"
+          height="18"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          class="lucide lucide-wrench"
+          aria-hidden="true"
+        >
+          <path
+            d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.106-3.105c.32-.322.863-.22.983.218a6 6 0 0 1-8.259 7.057l-7.91 7.91a1 1 0 0 1-2.999-3l7.91-7.91a6 6 0 0 1 7.057-8.259c.438.12.54.662.219.984z"
+          ></path>
+        </svg>
+        <!-- -->For mechanics
+      </button>
+    </div>
+    <div
+      class="promo-workflow-panel"
+      id="guide-rider-panel"
+      role="tabpanel"
+      aria-labelledby="guide-rider-tab"
+    >
+      <ol class="promo-workflow-steps">
+        <li>
+          <div class="promo-workflow-step-top"><span>01</span></div>
+          <h3>Create your rider account</h3>
+          <p>Choose Rider and provide your name and contact information.</p>
+        </li>
+        <li>
+          <div class="promo-workflow-step-top"><span>02</span></div>
+          <h3>Add your motorcycle</h3>
+          <p>Save your motorcycle details so they’re ready for your next booking.</p>
+        </li>
+        <li>
+          <div class="promo-workflow-step-top"><span>03</span></div>
+          <h3>Find a motor shop</h3>
+          <p>Explore the map, compare services, and choose a nearby shop.</p>
+        </li>
+        <li>
+          <div class="promo-workflow-step-top"><span>04</span></div>
+          <h3>Book a service</h3>
+          <p>
+            Select your motorcycle and service, describe the issue, choose a date and time, then
+            review your booking.
+          </p>
+        </li>
+        <li>
+          <div class="promo-workflow-step-top"><span>05</span></div>
+          <h3>Track the repair</h3>
+          <p>Check your booking status and repair progress, and contact the shop when needed.</p>
+        </li>
+        <li>
+          <div class="promo-workflow-step-top"><span>06</span></div>
+          <h3>Review the work and costs</h3>
+          <p>
+            See the completed repair details, parts, labor, and total cost in your service history.
+          </p>
+        </li>
+        <li>
+          <div class="promo-workflow-step-top"><span>07</span></div>
+          <h3>Buy parts when needed</h3>
+          <p>Browse available parts and review your order before checkout.</p>
+        </li>
+        <li>
+          <div class="promo-workflow-step-top"><span>08</span></div>
+          <h3>Monitor your expenses</h3>
+          <p>Use the expense tracker to review motorcycle spending and plan future maintenance.</p>
+        </li>
+      </ol>
+    </div>
+    <div
+      class="promo-workflow-panel"
+      id="guide-shop-panel"
+      role="tabpanel"
+      aria-labelledby="guide-shop-tab"
+      hidden=""
+    >
+      <ol class="promo-workflow-steps">
+        <li>
+          <div class="promo-workflow-step-top"><span>01</span></div>
+          <h3>Create your motor shop account</h3>
+          <p>Choose Motor Shop and provide the owner’s contact information.</p>
+        </li>
+        <li>
+          <div class="promo-workflow-step-top"><span>02</span></div>
+          <h3>Set up your shop profile</h3>
+          <p>Add your shop details, location, services, and business documents.</p>
+        </li>
+        <li>
+          <div class="promo-workflow-step-top"><span>03</span></div>
+          <h3>Organize your team and branches</h3>
+          <p>
+            Create mechanic accounts and set up branch information if you have multiple locations.
+          </p>
+        </li>
+        <li>
+          <div class="promo-workflow-step-top"><span>04</span></div>
+          <h3>Add parts and inventory</h3>
+          <p>List motorcycle parts, set prices and stock levels, and manage sales.</p>
+        </li>
+        <li>
+          <div class="promo-workflow-step-top"><span>05</span></div>
+          <h3>Manage incoming bookings</h3>
+          <p>Review service requests, organize the schedule, and assign a mechanic.</p>
+        </li>
+        <li>
+          <div class="promo-workflow-step-top"><span>06</span></div>
+          <h3>Oversee repair progress</h3>
+          <p>Track assigned jobs and keep repair statuses and work details up to date.</p>
+        </li>
+        <li>
+          <div class="promo-workflow-step-top"><span>07</span></div>
+          <h3>Complete the service record</h3>
+          <p>
+            Document the work, parts, labor, and costs so the rider can review the completed repair.
+          </p>
+        </li>
+        <li>
+          <div class="promo-workflow-step-top"><span>08</span></div>
+          <h3>Review and export records</h3>
+          <p>
+            Use analytics and branch views to review performance, then export business records
+            through App Integrations.
+          </p>
+        </li>
+      </ol>
+    </div>
+    <div
+      class="promo-workflow-panel"
+      id="guide-mechanic-panel"
+      role="tabpanel"
+      aria-labelledby="guide-mechanic-tab"
+      hidden=""
+    >
+      <ol class="promo-workflow-steps">
+        <li>
+          <div class="promo-workflow-step-top"><span>01</span></div>
+          <h3>Receive your staff account</h3>
+          <p>Your shop owner creates the mechanic account and provides your login details.</p>
+        </li>
+        <li>
+          <div class="promo-workflow-step-top"><span>02</span></div>
+          <h3>Review your dashboard</h3>
+          <p>See pending tasks, active repairs, and the work scheduled for you.</p>
+        </li>
+        <li>
+          <div class="promo-workflow-step-top"><span>03</span></div>
+          <h3>Open an assigned task</h3>
+          <p>Check the motorcycle, issue, instructions, priority, and deadline.</p>
+        </li>
+        <li>
+          <div class="promo-workflow-step-top"><span>04</span></div>
+          <h3>Inspect the repair details</h3>
+          <p>Review the job information before starting the work.</p>
+        </li>
+        <li>
+          <div class="promo-workflow-step-top"><span>05</span></div>
+          <h3>Update the repair</h3>
+          <p>Record its status, progress, services, and parts used.</p>
+        </li>
+        <li>
+          <div class="promo-workflow-step-top"><span>06</span></div>
+          <h3>Add work notes and costs</h3>
+          <p>Document the diagnosis, labor, parts costs, and other repair notes.</p>
+        </li>
+        <li>
+          <div class="promo-workflow-step-top"><span>07</span></div>
+          <h3>Coordinate with the team</h3>
+          <p>
+            Use the repair contacts to reach the shop owner or rider when clarification is needed.
+          </p>
+        </li>
+        <li>
+          <div class="promo-workflow-step-top"><span>08</span></div>
+          <h3>Review your work history</h3>
+          <p>Return to earlier assignments and completed repairs for reference.</p>
+        </li>
+      </ol>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,67 @@
+<!-- Header — styles: src/promotional/header.css -->
+<header class="promo-header">
+  <div class="promo-container promo-nav">
+    <a class="promo-brand" href="/" aria-label="MotoFix home"
+      ><img
+        alt=""
+        loading="lazy"
+        width="52"
+        height="52"
+        decoding="async"
+        data-nimg="1"
+        srcset="/motofix-logo.jpg 1x, /motofix-logo.jpg 2x"
+        src="/motofix-logo.jpg"
+      /><span>Moto<span>Fix</span></span></a
+    >
+    <!-- Debug navigation: every href beginning with # must match an id on a section, for example href="#features" and id="features". Update both sides together when renaming a section. -->
+    <nav id="promo-navigation" class="promo-nav-links" aria-label="Main navigation">
+      <a href="#home">Home</a><a href="#see-it-in-action">Promotional Video</a
+      ><a href="#about">About Us</a><a href="#our-prototype">Our Prototype</a
+      ><a href="#features">Features</a><a href="#how-it-works">How it Works</a
+      ><a href="#subscriptions">Subscriptions</a><a href="#contact">Contact</a>
+    </nav>
+    <a class="promo-button promo-nav-cta" href="/preview"
+      >See how it looks
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="18"
+        height="18"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        class="lucide lucide-arrow-up-right"
+        aria-hidden="true"
+      >
+        <path d="M7 7h10v10"></path>
+        <path d="M7 17 17 7"></path></svg></a
+    ><button
+      id="promo-menu-toggle"
+      class="promo-menu-button"
+      aria-label="Open navigation"
+      aria-expanded="false"
+      aria-controls="promo-navigation"
+    >
+      <!-- Debug mobile menu: promotion.js listens to #promo-menu-toggle, toggles .is-open on #promo-navigation, and updates aria-expanded. Keep the button ID, aria-controls, and nav ID paired. -->
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="24"
+        height="24"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        class="lucide lucide-menu"
+        aria-hidden="true"
+      >
+        <path d="M4 5h16"></path>
+        <path d="M4 12h16"></path>
+        <path d="M4 19h16"></path>
+      </svg>
+    </button>
+  </div>
+</header>

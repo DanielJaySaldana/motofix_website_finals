@@ -1,0 +1,68 @@
+<!-- Promotional Video — styles: src/promotional/promotional-video.css -->
+<section
+  class="promo-story promo-section"
+  id="see-it-in-action"
+  aria-label="MotoFix promotional video"
+>
+  <div class="promo-container">
+    <div class="promo-video-frame" data-reveal="true">
+      <!-- Debug video: promotion.js listens for clicks on .promo-video-cover, then loads /promo/motofix-final-promotional.mp4. If playback or the fallback fails, check this class, the poster image path, and that the MP4 exists in website/promo. -->
+      <button class="promo-video-cover" aria-label="Play the MotoFix promotional video">
+        <img
+          alt="Preview of the MotoFix promotional video"
+          loading="lazy"
+          width="1600"
+          height="900"
+          decoding="async"
+          data-nimg="1"
+          srcset="/promo/final-promotional-poster.jpg 1x, /promo/final-promotional-poster.jpg 2x"
+          src="/promo/final-promotional-poster.jpg"
+        /><span class="promo-video-shade"></span
+        ><span class="promo-video-play"
+          ><svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="26"
+            height="26"
+            viewBox="0 0 24 24"
+            fill="currentColor"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="lucide lucide-play"
+            aria-hidden="true"
+          >
+            <path
+              d="M5 5a2 2 0 0 1 3.008-1.728l11.997 6.998a2 2 0 0 1 .003 3.458l-12 7A2 2 0 0 1 5 19z"
+            ></path></svg
+          ><span>PLAY VIDEO</span></span
+        ><span class="promo-video-caption"
+          ><span>MOTOFIX / PROMOTIONAL VIDEO</span
+          ><span
+            >01:00
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="17"
+              height="17"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="lucide lucide-arrow-up-right"
+              aria-hidden="true"
+            >
+              <path d="M7 7h10v10"></path>
+              <path d="M7 17 17 7"></path></svg></span
+        ></span>
+      </button>
+    </div>
+    <div class="promo-value-statement" data-reveal="true">
+      <p>
+        <span class="promo-value-brand">MotoFix</span> is an all-in-one motorcycle service platform
+        that establishes <strong>transparency and accountability.</strong>
+      </p>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,87 @@
+<!-- Our Prototype — styles: src/promotional/our-prototype.css -->
+<section id="our-prototype" class="promo-prototype" aria-labelledby="about-solution-title">
+  <!-- Debug prototype card: the route SVG is decorative and should remain aria-hidden. The heading and text provide the meaningful content; this partial is inserted inside About Us by its include. -->
+  <div class="promo-section-heading" data-reveal="true">
+    <span class="promo-label" aria-hidden="true"></span>
+    <h2 id="about-solution-title">Our Proposed<br /><span>Solution</span></h2>
+  </div>
+  <article class="promo-prototype-card" aria-labelledby="about-solution-title" data-reveal="true">
+    <div
+      class="relative isolate grid min-h-[570px] place-items-center overflow-hidden rounded bg-[#0d303d]"
+    >
+      <svg class="promo-route-art" viewBox="0 0 600 650" fill="none" aria-hidden="true">
+        <path class="route-outline" d="M-40 540H185C365 540 100 125 330 125H635"></path>
+        <path class="route-dashes" d="M-40 540H185C365 540 100 125 330 125H635"></path>
+        <circle cx="330" cy="125" r="8" fill="currentColor"></circle>
+        <circle cx="185" cy="540" r="8" fill="currentColor"></circle>
+      </svg>
+      <div class="relative rotate-[7deg] py-9">
+        <div class="promo-phone">
+          <div class="promo-phone-camera"></div>
+          <img
+            alt="The main MotoFix login page displayed inside a mobile phone"
+            loading="lazy"
+            width="390"
+            height="844"
+            decoding="async"
+            data-nimg="1"
+            srcset="/preview/access/login.jpg?v=5.1 1x, /preview/access/login.jpg?v=5.1 2x"
+            src="/preview/access/login.jpg?v=5.1"
+          />
+          <div class="promo-phone-indicator"></div>
+        </div>
+        <span
+          class="absolute -left-9 top-16 grid h-20 w-20 rotate-[-18deg] place-items-center rounded-[22px] border border-[#ffbf8c] bg-gradient-to-br from-[#ffc58c] via-[#ff9358] to-[#d95b2b] text-[#153844] shadow-[0_14px_30px_#00151a55,inset_0_2px_1px_#ffffff99]"
+          aria-hidden="true"
+          ><svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="38"
+            height="38"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.6"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="lucide lucide-key-round"
+            aria-hidden="true"
+          >
+            <path
+              d="M2.586 17.414A2 2 0 0 0 2 18.828V21a1 1 0 0 0 1 1h3a1 1 0 0 0 1-1v-1a1 1 0 0 1 1-1h1a1 1 0 0 0 1-1v-1a1 1 0 0 1 1-1h.172a2 2 0 0 0 1.414-.586l.814-.814a6.5 6.5 0 1 0-4-4z"
+            ></path>
+            <circle cx="16.5" cy="7.5" r=".5" fill="currentColor"></circle></svg></span
+        ><span
+          class="absolute -right-9 bottom-16 grid h-[76px] w-[76px] rotate-[8deg] place-items-center rounded-[22px] border border-[#f8fff5] bg-gradient-to-br from-white via-[#e3efe6] to-[#a5c8b9] text-[#265c51] shadow-[0_14px_30px_#00151a55,inset_0_2px_1px_#ffffff99]"
+          aria-hidden="true"
+          ><svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="38"
+            height="38"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.6"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="lucide lucide-shield-check"
+            aria-hidden="true"
+          >
+            <path
+              d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"
+            ></path>
+            <path d="m9 12 2 2 4-4"></path></svg
+        ></span>
+      </div>
+    </div>
+    <div class="text-[clamp(19px,1.65vw,25px)] leading-[1.85] font-medium text-[#fff9ed]">
+      <p class="indent-[2em]">
+        <strong class="font-extrabold text-[#ffba86]">MotoFix provides a digital platform</strong>
+        <!-- -->where motorcycle riders can discover nearby motor shops, check available services
+        and spare parts, book repair appointments, review estimated costs, and monitor repair
+        progress through regular updates and photo evidence. For motor shops and motorcycle
+        mechanics, the platform offers tools to manage bookings, services, parts inventory, and
+        repair records, helping improve daily operations and customer communication.
+      </p>
+    </div>
+  </article>
+</section>

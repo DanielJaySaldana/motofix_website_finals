@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>MotoFix — Your repair made clear</title>
+  </head>
+  <body>
+    <div id="root">
+      <div class="promo-site">
+        <!-- Build note: this is the source shell, not the full page markup. Vite replaces each exact include directive with the named HTML partial; keep filenames and include syntax intact. -->
+        <div class="promo-scroll-progress" aria-hidden="true"></div>
+        <a class="promo-skip" href="#main">Skip to content</a>
+        <!-- include: "header.html" -->
+        <!-- Debug page order: these include directives control the visible top-to-bottom order. Move an include to reorder a section; do not remove the main wrapper or the #main skip-link target. -->
+        <main id="main">
+          <!-- include: "home.html" -->
+          <!-- include: "promotional-video.html" -->
+          <!-- Our Prototype is included inside About Us to preserve its existing layout. -->
+          <!-- include: "about-us.html" -->
+          <!-- include: "features.html" -->
+          <!-- include: "how-it-works.html" -->
+          <!-- include: "subscriptions.html" -->
+          <!-- include: "contact.html" -->
+        </main>
+        <!-- include: "footer.html" -->
+      </div>
+    </div>
+    <!-- Debug startup: entry.tsx loads the promotional styles and initializes behavior after the HTML partials are assembled. If the markup appears but controls do not work, inspect entry.tsx and promotion.js. -->
+    <script type="module" src="/src/promotional/entry.tsx"></script>
+  </body>
+</html>

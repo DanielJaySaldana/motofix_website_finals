@@ -1,0 +1,11 @@
+/* Subscription plan artwork and divider. Shared section spacing is in shared.css. */
+/* Debug plan artwork: the rule keeps the infographic full width with its natural height. If it is stretched or missing, check the HTML src/srcset and the file in website/promo before changing this sizing rule. */
+.promo-subscriptions {
+  border-color: var(--promo-line);
+  border-bottom-width: 1px;
+}
+.promo-subscriptions-plan {
+  display: block;
+  width: 100%;
+  height: auto;
+}
